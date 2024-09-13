@@ -1,5 +1,5 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: dist/curry-leaves/
     destination: /var/www/html
