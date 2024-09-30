@@ -1,0 +1,23 @@
+<form class="search" (submit)="onSearch($event)">
+  <button type="button" (click)="toggleSearch()">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+
+  <!-- Search Input -->
+  <input type="search" [(ngModel)]="searchQuery" [ngModelOptions]="{standalone: true}" (input)="onSearch()"
+    (keydown)="handleKeydown($event)" [class.active]="searchActive" placeholder="Search here..." required />
+
+  <button type="button" *ngIf="searchActive" (click)="clearSearch()">
+    <i class="fa-solid fa-close"></i>
+  </button>
+
+  <!-- Search Results Dropdown -->
+  <div class="search-results" *ngIf="searchResults.length > 0">
+    <ul>
+      <li *ngFor="let result of searchResults; let i = index" (click)="selectResult(result)"
+        [class.highlight]="i === highlightedIndex">
+        {{ result }}
+      </li>
+    </ul>
+  </div>
+</form>

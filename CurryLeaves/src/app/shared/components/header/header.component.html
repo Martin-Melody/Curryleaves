@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="side-menu-icon" (click)="toggleSidenav()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <div class="center-div"></div>
+  <div class="profile-icons">
+    <i class="fa-regular fa-user"></i>
+    <div class="cart-icon" (click)="toggleCartSidenav()"> <!-- Toggle cart sidenav -->
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span class="cart-count">{{ cartItemsCount }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="search-container">
+  <app-home-search></app-home-search>
+</div>
+
+<!-- Side Navigation (Left) -->
+<div class="sidenav" [class.active]="isSidenavOpen">
+  <a href="javascript:void(0)" class="closebtn" (click)="toggleSidenav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+<!-- Cart Side Navigation (Right) -->
+<div class="cartSidenav" [class.active]="isCartSidenavOpen">
+  <a href="javascript:void(0)" class="closebtn" (click)="toggleCartSidenav()">&times;</a>
+
+  <div class="cart-item" *ngFor="let item of cartItems; index as i"> {{item.title}} </div>
+</div>

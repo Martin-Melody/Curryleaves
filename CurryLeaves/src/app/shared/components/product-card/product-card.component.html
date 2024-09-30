@@ -1,0 +1,16 @@
+<div class="container" [ngClass]="{'active': isActive}"
+  [ngStyle]="{'background-image': 'url(' + product.imageUrl + ')'}" (click)="toggleOverlay()">
+  <div class="overlay">
+    <div class="items"></div>
+    <div class="items head">
+      <p>{{ product.title }}</p>
+    </div>
+    <div class="items price">
+      <p class="new">€{{ product.price }}</p>
+    </div>
+    <div class="items cart" (click)="addToCart()">
+<i class="fa" [ngClass]="addToCartClicked ? 'fa-check check-icon' : 'fa-shopping-cart cart-icon'"></i>
+      <span>ADD TO CART</span>
+    </div>
+  </div>
+</div>
