@@ -1,5 +1,47 @@
-$primary-color: #7DA97B;
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+$primary-color: #9BB291;
 $background-color: #F8F9FA;
+
+$secondary-color: #7BB4C4;
+$secondary-color-test: #FFD687;
+$font-color: #404A3B;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+app-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
 
 @font-face {
   font-family: 'Poppins';

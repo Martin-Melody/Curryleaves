@@ -1,0 +1,13 @@
+<div class="content-container">
+  <div class="title-container">
+    <h4>{{title}}</h4>
+  </div>
+
+  <div class="product-list-container">
+    <div class="product" *ngFor="let product of products; index as i">
+      <app-product-card [product]=product></app-product-card>
+    </div>
+  </div>
+
+
+</div>

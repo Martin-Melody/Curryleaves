@@ -1,0 +1,172 @@
+.hero-section {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-md-7 {
+  width: calc(58.33% - 0.5rem);
+}
+
+.col-md-5 {
+  width: calc(41.67% - 0.5rem);
+}
+
+.hero-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.hero-text {
+  margin-bottom: 1rem;
+  color: #000;
+  max-width: 100%;
+  flex-grow: 1;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.hero-button:hover {
+  background-color: #333;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero-item-left {}
+
+.hero-item-right {
+  position: relative;
+}
+
+.hero-item-right .hero-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  width: 90%;
+}
+
+.hero-item-right .hero-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: lightgrey;
+}
+
+.hero-item-right .hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero-item-right .hero-button {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-item-right .hero-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Add responsiveness with media queries */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-7,
+  .col-md-5 {
+    width: 100%;
+  }
+
+  .hero-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-item-right .hero-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .hero-item-right .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-button {
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-item-right .hero-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .hero-item-right .hero-text p {
+    font-size: 0.9rem;
+  }
+}

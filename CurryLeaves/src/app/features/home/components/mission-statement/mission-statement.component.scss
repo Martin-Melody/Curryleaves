@@ -1,0 +1,52 @@
+.mission-statement {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  p {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.25rem;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 1200px) {
+    .mission-statement {
+      max-width: 80%;
+      padding: 1.5rem;
+    }
+
+    p {
+      font-size: 1.15rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mission-statement {
+      max-width: 100%;
+      padding: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .mission-statement {
+      width: 100%;
+      padding: 0.75rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
